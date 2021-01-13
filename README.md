@@ -1,7 +1,26 @@
-# Project-2 --- Fur Babies R Us
+# Project 2
 
-## Team name: Project Fur Baby
+## Project Name: The Purr-fect Match App
 
-### Description: 
-A simple application for fur parents to search all information on dogs and cats. This application is for anyone looking to find the best matched pet or to search, add, and/or update any breed specific information. 
+## Team Name: The Cool Catz
+
+## Description: 
+Looking for the right feline companion for you?  Use our app to find the right cat breed for you using
+an extensive database complete with pictures and basic information to help you make an educated decision.  Ready to
+make the next step and find a cat?  Or looking to find a home for a cat?  Use our message board to post your wanted/
+for sale/for adoption needs!
+
+## API Used: 
+thecatapi.com
+
+## New Technologies Used: 
+TBD, potentially Foundation or Materialize CSS
+
+
+
+
+
+
+
+
 
