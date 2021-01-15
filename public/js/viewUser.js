@@ -1,24 +1,24 @@
 // Wait for the DOM to completely load before we run our JS
-document.addEventListener('DOMContentLoaded', (e) => {
-  console.log('dom loaded!');
+document.addEventListener("DOMContentLoaded", (e) => {
+  console.log("dom loaded!");
 
-  const todoContainer = document.querySelector('.todo-container');
-  const todoForm = document.getElementById('todo-form');
+  const todoContainer = document.querySelector(".todo-container");
+  const todoForm = document.getElementById("todo-form");
 
   // Inital todos array
   let todos = [];
 
   // Helper function to hide items
   const hide = (el) => {
-    el.style.display = 'none';
+    el.style.display = "none";
   };
   const show = (el) => {
-    el.style.display = 'inline';
+    el.style.display = "inline";
   };
 
   // This function resets the todos displayed with new todos from the database
   const initializeRows = () => {
-    todoContainer.innerHTML = '';
+    todoContainer.innerHTML = "";
     const rowsToAdd = [];
     for (let i = 0; i < todos.length; i++) {
       rowsToAdd.push(createNewRow(todos[i]));
@@ -29,15 +29,15 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
   // Helper function to grab todos
   const getTodos = () => {
-    fetch('/api/todos', {
-      method: 'GET',
+    fetch("/api/todos", {
+      method: "GET",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log('Success in getting todos:', data);
+        console.log("Success in getting todos:", data);
         todos = data;
         initializeRows();
       });
@@ -51,9 +51,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const { id } = e.target.dataset;
 
     fetch(`/api/todos/${id}`, {
-      method: 'DELETE',
+      method: "DELETE",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
     }).then(getTodos);
   };
@@ -65,13 +65,13 @@ document.addEventListener('DOMContentLoaded', (e) => {
     for (let i = 0; i < itemChildren.length; i++) {
       const currentEl = itemChildren[i];
 
-      if (currentEl.tagName === 'INPUT') {
+      if (currentEl.tagName === "INPUT") {
         currentEl.value = currentEl.parentElement.children[0].innerText;
         show(currentEl);
         currentEl.focus();
       }
 
-      if (currentEl.tagName === 'SPAN' || currentEl.tagName === 'BUTTON') {
+      if (currentEl.tagName === "SPAN" || currentEl.tagName === "BUTTON") {
         hide(currentEl);
       }
     }
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
       for (let i = 0; i < itemParent.children.length; i++) {
         const currentChild = itemParent.children[i];
 
-        if (currentChild.tagName === 'INPUT') {
+        if (currentChild.tagName === "INPUT") {
           hide(currentChild);
         } else {
           show(currentChild);
@@ -95,11 +95,11 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
   // Update a todo (PUT)
   const updateTodo = (todo) => {
-    console.log('attempting to update with', todo);
-    fetch('/api/todos', {
-      method: 'PUT',
+    console.log("attempting to update with", todo);
+    fetch("/api/todos", {
+      method: "PUT",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(todo),
     }).then((response) => console.log(response));
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         for (let i = 0; i < itemParent.children.length; i++) {
           const currentChild = itemParent.children[i];
 
-          if (currentChild.tagName === 'INPUT') {
+          if (currentChild.tagName === "INPUT") {
             hide(currentChild);
           } else {
             show(currentChild);
@@ -138,40 +138,40 @@ document.addEventListener('DOMContentLoaded', (e) => {
   // Construct a todo-item row
   const createNewRow = (todo) => {
     // Containing row
-    const newInputRow = document.createElement('li');
-    newInputRow.classList.add('list-group-item', 'todo-item');
-    newInputRow.setAttribute('complete', todo.complete);
+    const newInputRow = document.createElement("li");
+    newInputRow.classList.add("list-group-item", "todo-item");
+    newInputRow.setAttribute("complete", todo.complete);
 
     // Span
-    const rowSpan = document.createElement('span');
+    const rowSpan = document.createElement("span");
     rowSpan.innerText = todo.text;
 
     // Input field
-    const rowInput = document.createElement('input');
-    rowInput.setAttribute('type', 'text');
-    rowInput.classList.add('edit');
-    rowInput.style.display = 'none';
+    const rowInput = document.createElement("input");
+    rowInput.setAttribute("type", "text");
+    rowInput.classList.add("edit");
+    rowInput.style.display = "none";
 
     // Delete button
-    const delBtn = document.createElement('button');
-    delBtn.classList.add('delete', 'btn', 'btn-danger');
-    delBtn.setAttribute('data-id', todo.id);
-    rowInput.setAttribute('data-id', todo.id);
-    delBtn.innerText = 'x';
-    delBtn.addEventListener('click', deleteTodo);
+    const delBtn = document.createElement("button");
+    delBtn.classList.add("delete", "btn", "btn-danger");
+    delBtn.setAttribute("data-id", todo.id);
+    rowInput.setAttribute("data-id", todo.id);
+    delBtn.innerText = "x";
+    delBtn.addEventListener("click", deleteTodo);
 
     // Complete button
-    const completeBtn = document.createElement('button');
-    completeBtn.classList.add('complete', 'btn', 'btn-primary');
-    completeBtn.innerText = '✓';
-    completeBtn.setAttribute('data-id', todo.id);
+    const completeBtn = document.createElement("button");
+    completeBtn.classList.add("complete", "btn", "btn-primary");
+    completeBtn.innerText = "✓";
+    completeBtn.setAttribute("data-id", todo.id);
 
-    completeBtn.addEventListener('click', toggleComplete);
+    completeBtn.addEventListener("click", toggleComplete);
 
     // Add event listener for editing
-    newInputRow.addEventListener('click', editTodo);
-    rowInput.addEventListener('blur', cancelEdit);
-    rowInput.addEventListener('keyup', finishEdit);
+    newInputRow.addEventListener("click", editTodo);
+    rowInput.addEventListener("blur", cancelEdit);
+    rowInput.addEventListener("keyup", finishEdit);
 
     // Append all items to the row
     newInputRow.appendChild(rowSpan);
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     newInputRow.appendChild(completeBtn);
 
     if (todo.complete) {
-      rowSpan.style.textDecoration = 'line-through';
+      rowSpan.style.textDecoration = "line-through";
     }
 
     return newInputRow;
@@ -195,23 +195,23 @@ document.addEventListener('DOMContentLoaded', (e) => {
       id: e.target.dataset.id,
     };
     currentTodo.complete = !currentTodo.complete;
-    spanEl.style.textDecoration = 'line-through';
+    spanEl.style.textDecoration = "line-through";
     updateTodo(currentTodo);
-    console.log('toggleComplete -> currentTodo', currentTodo);
+    console.log("toggleComplete -> currentTodo", currentTodo);
   };
 
   // Function to actually put the todo on the page
   const insertTodo = (e) => {
     e.preventDefault();
     const todo = {
-      text: document.getElementById('newTodo').value.trim(),
+      text: document.getElementById("newTodo").value.trim(),
       complete: false,
     };
     if (todo.text) {
-      fetch('/api/todos', {
-        method: 'POST',
+      fetch("/api/todos", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(todo),
       })
@@ -219,5 +219,5 @@ document.addEventListener('DOMContentLoaded', (e) => {
         .then(() => getTodos());
     }
   };
-  todoForm.addEventListener('submit', insertTodo);
+  todoForm.addEventListener("submit", insertTodo);
 });
