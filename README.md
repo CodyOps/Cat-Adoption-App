@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Project 2
 
 ## Project Name: The Purr-fect Match App
@@ -58,5 +59,14 @@ animals - name/temp/description/img
 
 
 
+=======
+
+# Project Fur Babies
+>>>>>>> main
 
 
+use common columns
+- name
+- temperament
+- life expentancy
+- weight
