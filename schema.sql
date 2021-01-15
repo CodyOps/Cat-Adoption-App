@@ -3,7 +3,7 @@ CREATE DATABASE `catsForum`;
 USE `catsForum`;
 
 
-/* Create a table for all your dogs and cats*/
+/* Create a table for all your cats*/
 CREATE TABLE `allpets` (
 	`id` Int( 11 ) AUTO_INCREMENT NOT NULL,
 	`petName` VARCHAR( 255 ) NOT NULL,
@@ -11,7 +11,6 @@ CREATE TABLE `allpets` (
 	`age` INT(11) NOT NULL,
     `zipCode` INT(11) NOT NULL,
     `ownerName` VARCHAR( 255 ) NOT NULL,
-	/* Set ID as primary key */
 	PRIMARY KEY ( `id` )
 );
 
