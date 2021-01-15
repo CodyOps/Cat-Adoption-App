@@ -1,4 +1,6 @@
+// Dependencies
 const express = require('express');
+const exphb = require('express-handlebars');
 
 // Sets up the Express App
 const app = express();
@@ -13,6 +15,10 @@ app.use(express.json());
 
 // Static directory
 app.use(express.static('public'));
+
+// Sets handlebars as default template engine
+app.engine("handlebars", exphb({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 // Routes
 require('./routes/api-routes.js')(app);
