@@ -12,7 +12,7 @@ router.get("/catadoption", function (req, res) {
   });
 });
 
-router.post("/catsForum/create", function (req, res) {
+router.post("/cats/create", function (req, res) {
   catsForum.create(req.body.cat_name, function (result) {
     console.log(result);
     res.redirect("/");
