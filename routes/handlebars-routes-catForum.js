@@ -19,4 +19,8 @@ module.exports = (app) => {
   app.get("/all", (req, res) =>
     res.sendFile(path.join(__dirname, "../views/all.handlebars"))
   );
+
+  app.get("/view", (req, res) =>
+    res.sendFile(path.join(__dirname, "../views/view.handlebars"))
+  );
 };
