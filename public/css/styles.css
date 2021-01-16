@@ -1,19 +1,18 @@
-.todo-list {
-  margin: 0 auto;
-  margin-top: 75px;
+/* for index.handlebars */
+#match_signup {
+  height: 500px;
+  background-image: url("./img/mancarryingcat.jpg");
+  background-size: 700px;
+  background-repeat: no-repeat;
 }
 
-input.new-item:focus {
-  outline: none;
+#testimonials {
+  background-color: rgba(250, 192, 184, 0.747);
+  height: 150px;
+  width: auto;
+  text-align: center;
 }
 
-.list-group-item > button.delete,
-.list-group-item > button.complete {
-  float: right;
-  height: 25px;
-  margin-left: 5px;
-}
-
-.edit {
-  width: 100%;
+h6 {
+  text-align: center;
 }

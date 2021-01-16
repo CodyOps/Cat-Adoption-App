@@ -1,5 +1,5 @@
-const addBtn = document.getElementById("add-btn");
-addBtn.addEventListener("click", (event) => {
+const addBtn = document.getElementById("user_post");
+addBtn.addEventListener("submit", (event) => {
   event.preventDefault();
 
   // All data comes from the input fields
