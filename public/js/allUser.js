@@ -1,37 +1,48 @@
-const addBtn = document.getElementById("add-btn");
-addBtn.addEventListener("click", (event) => {
-  event.preventDefault();
+// Code here will dictate how the page displays all the characters
 
-  // All data comes from the input fields
-  const newUser = {
-    catName: document.getElementById("catName").value.trim(),
-    breed: document.getElementById("breed").value.trim(),
-    age: document.getElementById("age").value.trim(),
-    zipcode: document.getElementById("zipcode").value.trim(),
-    ownerName: document.getElementById("ownerName").value.trim(),
-  };
+fetch("/api", {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json",
+  },
+})
+  .then((response) => response.json())
+  .then((data) => {
+    console.log("Success in grabbing all users:", data);
+    data.forEach(({ catName, breed, age, zipcode, ownerName }, i) => {
+      // Parent div for other elements
+      const sectionBreak = document.createElement("hr");
+      const wellSection = document.createElement("div");
+      wellSection.classList.add("well");
 
-  // Send POST request using the fetch API
-  fetch("/api/new", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(newCharacter),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log("Success in adding character:", data);
-      alert(`Adding character: ${newCharacter.name}!`);
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-      alert(error);
+      // Add an ID so we can tell each character apart
+      wellSection.setAttribute("id", `user-well-${i}`);
+
+      // Append the well to the well container
+      const wellContainer = document.getElementById("well-section");
+      wellContainer.appendChild(wellSection);
+
+      // Add all characters
+      const catnameEl = document.createElement("h2");
+      catnameEl.textContent = `Name: ${catName}`;
+
+      const breedEl = document.createElement("h6");
+      breedEl.textContent = `Breed: ${breed}`;
+
+      const ageEl = document.createElement("h6");
+      ageEl.textContent = `Age: ${age}`;
+
+      const zipcodeEl = document.createElement("h6");
+      zipcodeEl.textContent = `Zipcode: ${zipcode}`;
+
+      const ownerNameEl = document.createElement("h6");
+      ownerNameEl.textContent = `Owner's Name: ${ownerName}`;
+
+      wellSection.appendChild(nameEl);
+      wellSection.appendChild(breedEl);
+      wellSection.appendChild(ageEl);
+      wellSection.appendChild(zipcodeEl);
+      wellSection.appendChild(ownerNameEl);
+      wellSection.appendChild(sectionBreak);
     });
-
-  // Dump the content of the input boxes
-  document.getElementById("name").value = "";
-  document.getElementById("role").value = "";
-  document.getElementById("age").value = "";
-  document.getElementById("force-points").value = "";
-});
+  });
