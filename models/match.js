@@ -17,9 +17,9 @@ const Match = sequelize.define(
     // First cat trait (a string)
     temperamentOne: Sequelize.STRING,
     // Second cat trait (a string)
-    temperatmentTwo: Sequelize.INTEGER,
+    temperamentTwo: Sequelize.INTEGER,
     // Third cat trait (a string)
-    temperatmentThree: Sequelize.INTEGER,
+    temperamentThree: Sequelize.INTEGER,
     // Breed's maximum life expectancy
     lifeSpan: Sequelize.INTEGER,
     // Breed's general size rating
