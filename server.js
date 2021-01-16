@@ -1,4 +1,5 @@
 const express = require('express');
+const exphbs = require("express-handlebars")
 
 // Sets up the Express App
 const app = express();
@@ -13,6 +14,15 @@ app.use(express.json());
 
 // Static directory
 app.use(express.static('public'));
+
+// Handlebars
+app.engine(
+	"handlebars",
+	exphbs({
+		defaultLayout: "main"
+	})
+);
+app.set("view engine", "handlebars");
 
 // Routes
 require('./routes/api-routes.js')(app);
