@@ -56,8 +56,23 @@ or
 animals - name/temp/description/img
 
 - routes
+<<<<<<< HEAD
   -- feature to show all in table
   --
+=======
+-- feature to show all in table
+-- 
+
+
+
+
+
+
+
+
+
+=======
+>>>>>>> 46635450e6221b56507b6ee4e07bb439dc210355
 
 # Project Fur Babies
 
