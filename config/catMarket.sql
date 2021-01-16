@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS `catsForum`;
-CREATE DATABASE `catsForum`;
-USE `catsForum`;
+DROP DATABASE IF EXISTS `catMarket`;
+CREATE DATABASE `catMarket`;
+USE `catMarket`;
 
 
 /* Create a table for all your cats*/
