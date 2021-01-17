@@ -23,3 +23,4 @@ INSERT INTO allpets (petName, breed, age, zipCode, ownerName) VALUES ('Shadow', 
 INSERT INTO allpets (petName, breed, age, zipCode, ownerName) VALUES ('Jameson', 'Ragdoll', 7, 88901, 'Cody');
 INSERT INTO allpets (petName, breed, age, zipCode, ownerName) VALUES ('Mario', 'Persian Cat', 2, 10001, 'Ben');
 INSERT INTO allpets (petName, breed, age, zipCode, ownerName) VALUES ('Jameson', 'Maine Coon', 10, 98101, 'Jennifer');
+INSERT INTO allpets (petName, breed, age, zipCode, ownerName) VALUES ('Leo', 'Sphynx', 8, 60007, 'Robert');
