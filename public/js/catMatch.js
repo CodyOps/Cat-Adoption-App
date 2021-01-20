@@ -18,10 +18,6 @@ const { application } = require("express");
 //       "https://api.thecatapi.com/v1/breeds/" + data.description.description;
 //     const wikiLink =
 //       "https://api.thecatapi.com/v1/breeds/" + data.wikipedia_url.wikiLink;
-<<<<<<< HEAD
-=======
-
->>>>>>> d472c5e0c89c88fb3ac75d4812ebbf29a338c21e
 
 //     $(".cat").attr("src", cat);
 //     $(".temperament").append(temperament);

@@ -11,16 +11,16 @@ module.exports = (app) => {
   //     };
   //     res.render('marketplace', hbsObject);
   // });
-    
-    // if (req.params.allpets) {
-    //   db.allpets.findOne({
-    //     where: {
-    //       catName: req.params.catName,
-    //     },
-    //   }).then((result) => res.json(result));
-    // } else {
-    //   db.allpets.findAll().then((result) => res.json(result));
-    // }
+
+  // if (req.params.allpets) {
+  //   db.allpets.findOne({
+  //     where: {
+  //       catName: req.params.catName,
+  //     },
+  //   }).then((result) => res.json(result));
+  // } else {
+  //   db.allpets.findAll().then((result) => res.json(result));
+  // }
   // });
 
   app.post("/api/new", (req, res) => {
