@@ -1,32 +1,48 @@
 // Dependencies
-const User = require("../models/marketusers.js");
+const db = require("../models");
+// const catMarket = require("../models/marketusers.js");
 
 // Routes
 module.exports = (app) => {
-  app.get("/api/:users?", (req, res) => {
-    if (req.params.users) {
-      User.findOne({
-        where: {
-          routeName: req.params.users,
-        },
-      }).then((result) => res.json(result));
-    } else {
-      User.findAll().then((result) => res.json(result));
-    }
-  });
+  // app.get("/api/marketp", (req, res) => {
+  //   db.all("/marketplace", (data) => {
+  //     const hbsObject = {
+  //         catMarket: data,
+  //     };
+  //     res.render('marketplace', hbsObject);
+  // });
+    
+    // if (req.params.allpets) {
+    //   db.allpets.findOne({
+    //     where: {
+    //       catName: req.params.catName,
+    //     },
+    //   }).then((result) => res.json(result));
+    // } else {
+    //   db.allpets.findAll().then((result) => res.json(result));
+    // }
+  // });
 
   app.post("/api/new", (req, res) => {
     const user = req.body;
-    const routeName = user.name.replace(/\s+/g, "").toLowerCase();
-
-    User.create({
-      routeName,
-      catName: user.name,
-      breed: user.role,
-      age: user.age,
-      zipcode: user.zipcode,
-      ownerName: user.ownerName,
-    });
-    res.status(200).json(user);
+    console.log(user);
+    // const routeName = user.name.replace(/\s+/g, "").toLowerCase();
+    // console.log(db);
+    db.allpets
+      .create({
+        // routeName,
+        ownerName: user.ownerName,
+        catName: user.catName,
+        breed: user.breed,
+        age: user.age,
+        zipcode: user.zipcode,
+      })
+      .then(function () {
+        res.redirect("/marketplace");
+      })
+      .catch(function () {
+        res.status(401).json(err);
+      });
+    // res.sendStatus(200);
   });
 };

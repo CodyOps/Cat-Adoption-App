@@ -3,8 +3,8 @@
         <div class="nav-wrapper">
             <a href="#" class="brand-logo right">The Purr-fect Match</a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="index.handlebars">Home</a></li>
-                <li><a href="badges.html">Contact Us</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="">Contact Us</a></li>
                 <li><a href="facebook.com">Facebook</a></li>
             </ul>
         </div>
@@ -31,9 +31,9 @@
 
         <ul class="button-group float-center">
             <button>
-                <a class="waves-effect waves-light btn-small" href="/match.handlebars">Match Me!</a>
+                <a class="waves-effect waves-light btn-small" href="/match">Match Me!</a>
             </button>
-            <button><a class="waves-effect waves-light btn-small">Marketplace!</a></button>
+            <button><a class="waves-effect waves-light btn-small" href="/marketplace">Marketplace!</a></button>
         </ul>
     </div>
 
@@ -44,7 +44,7 @@
             <h6>Search, Adopt, Love!</h6>
         </div>
         <div class="row">
-            <form class="col s12" id="use_post" action="/api/new" method="POST">
+            <form class="col s12" id="user_post" action="/api/new" method="POST">
                 <div class="row">
                     <div class="input-field col s6">
                         <input placeholder="Placeholder" id="owner_name" type="text" name="ownerName" class="validate">
@@ -63,7 +63,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="age" type="text" class="validate">
+                        <input id="age" type="text" class="validate" name="age">
                         <label for="age">Age</label>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                         <label for="zip">Zip code</label>
                     </div>
                 </div>
-                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <button class="btn waves-effect waves-light" type="submit">Submit
                     <i class="material-icons right">send</i>
                 </button>
             </form>
