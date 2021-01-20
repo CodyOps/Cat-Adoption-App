@@ -2,11 +2,9 @@
 // =============================================================
 module.exports = function (sequelize, DataTypes) {
   // Creates a "Character" model that matches up with DB
-  const User = sequelize.define(
-    "user",
+  const Allpet = sequelize.define(
+    "allpets",
     {
-      // The routeName gets saved as a string
-      routeName: DataTypes.STRING,
       // The name of the character (a string)
       catName: DataTypes.STRING,
       // The character's role (a string)
@@ -26,9 +24,10 @@ module.exports = function (sequelize, DataTypes) {
   );
 
   // Syncs with DB
-  User.sync();
-  return User;
+  Allpet.sync();
+  return Allpet;
 };
+
 // // Sequelize (capital) references the standard library
 // const Sequelize = require("sequelize");
 // // Sequelize (lowercase) references our connection to the DB.

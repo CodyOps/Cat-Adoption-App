@@ -1,9 +1,12 @@
+
+
+
 const addBtn = document.getElementById("user_post");
 addBtn.addEventListener("submit", (event) => {
   event.preventDefault();
 
   // All data comes from the input fields
-  const newUser = {
+  const userPost = {
     catName: document.getElementById("catName").value.trim(),
     breed: document.getElementById("breed").value.trim(),
     age: document.getElementById("age").value.trim(),
@@ -15,14 +18,16 @@ addBtn.addEventListener("submit", (event) => {
   fetch("/api/new", {
     method: "POST",
     headers: {
+      Accept: 'application/json',
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(newUser),
+    body: JSON.stringify(userPost),
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log("Success in adding user:", data);
-      alert(`Adding user: ${newUser.catName}!`);
+      console.log("Success in submitting a post:", data);
+      alert(`${userPost.catName} has been added to the marketplace!`);
+      window.location.replace("/marketplace");
     })
     .catch((error) => {
       console.error("Error:", error);
