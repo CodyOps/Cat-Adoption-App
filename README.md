@@ -4,6 +4,19 @@
 
 ## Team Name: The Cool Catz
 
+## Table of Contents
+
+- [Title](#title)
+- [Description](#description)
+- [User Story](#story)
+- [APIs](#apiused)
+- [Images](#photos)
+- [New Technologies Used](#technologies)
+- [Installation](#installation)
+- [Technologies](#technology)
+- [Contribution](#contribution)
+- [License](#license)
+
 ## Description:
 
 Looking for the right feline companion for you? Use our app to find the right cat breed for you using
@@ -11,23 +24,33 @@ an extensive database complete with pictures and basic information to help you m
 make the next step and find a cat? Or looking to find a home for a cat? Use our message board to post your wanted/
 for sale/for adoption needs!
 
+## User Story:
+
+As a user, I would like to have an application that can match me with cats that fit my desired characteristics. I would also like the option to be able to see cat postings availible for adoption or sale.
+
 ## API Used:
 
 thecatapi.com
 
+## Photos
+
+_Photos of this Project:_
+
 ## New Technologies Used:
 
-TBD, potentially Foundation or Materialize CSS
+Materialize CSS
 
-- Foundation:
-  - an advanced responsive front-end framework
+- Materialize:
+  - a modern responsive front-end framework based on material design
   - mobile first design used for building front-ends/UI
+  - user experience focused that incorporates components and animations that provided feedback to users.
 
 ## Installation
 
 - After cloning down app from GitHub, user will need to run a few commands.
 - Run in terminal: 'npm install' to install packages
 - To start application/server, run in the terminal: 'node server.js'
+- In the browser, access the url with localhost:8080
 
 ## Technologies
 
@@ -42,43 +65,19 @@ TBD, potentially Foundation or Materialize CSS
 
 ---
 
-focus on CRUD operations
-
-how do we get data from a user then connect to backend
+- Focus on CRUD operations
+- Create a user/animal table
+- Animals - name/temp/description/img
 
 ---
 
-create a user/animal table
-create a user profile in the table
+## Contributions:
 
-or
+- Devyn Bailey
+- Christian Go
+- Cody Chen
+- Ashley Bartholomew
 
-animals - name/temp/description/img
+## License
 
-- routes
-<<<<<<< HEAD
-  -- feature to show all in table
-  --
-=======
--- feature to show all in table
--- 
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> 46635450e6221b56507b6ee4e07bb439dc210355
-
-# Project Fur Babies
-
-use common columns
-
-- name
-- temperament
-- life expentancy
-- weight
+MIT License
