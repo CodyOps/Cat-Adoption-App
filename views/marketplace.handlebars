@@ -1,5 +1,19 @@
-<h1>Marketplace</h1>
+<header>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo right">The Purr-fect Match</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+        <li><a href="">Contact Us</a></li>
+        <li><a href="collapsible.html">Facebook</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
+<div class="divider"></div>
+
+<<<<<<< HEAD
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,8 +34,69 @@
             <li><a href="marketplace.handlebars">Marketplace</a></li>
             <li><a href="msgboard.handlebars">Message Board</a></li>
             <li><a href="badges.html">Contact Us</a></li>
+=======
+<!-- ROW WITH FILTER-->
+<div class="row">
+  <div class="col s2" id="filter">
+    <h4>Filter</h4>
+    <ul class="button-group float-center">
+      <label>Browser Select</label>
+      <select class="browser-default">
+        <option value="" disabled selected>Breed</option>
+        {{!-- is there a way to loop through the breed column??? --}}
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+      </select>
+      <select class="browser-default">
+        <option value="" disabled selected>Age</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+      </select>
+      <select class="browser-default">
+        <option value="" disabled selected>Zip Code</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+      </select>
+    </ul>
+  </div>
+
+  <div class="col s10">
+    <!-- cat marketplace title and description   -->
+    <div class="row">
+      <h4>Cat marketplace</h4>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero voluptatibus atque iusto officiis omnis pariatur
+        amet maiores eligendi dolores tenetur, autem eos ipsum repellat sit magnam, consequuntur quis aliquam quia!
+      </p>
+      <div class="divider"></div>
+
+
+      <!-- container with cat cards -->
+      <div class="container">
+        <div class="row">
+          {{#each cats}}
+          <div class="col l4 m4 s12">
+            <div class="card">
+              <div class="card-img">
+                <img src="img/catimg2.jpg" class="responsive-img">
+              </div>
+              <div class="card-content">
+                <span class="card-title">Cat Name: {{this.catName}}</span>
+                <p>
+                <ul>
+                  <li>Age: {{this.age}}</li>
+                  <li>Breed: {{this.breed}}</li>
+                  <li>Owner name: {{this.ownerName}}</li>
+                  <li>Located at zip code: {{this.zipcode}}</li>
+>>>>>>> acfca59606e1889c0bcc580e4d872d281a109804
                 </ul>
+                </p>
+              </div>
             </div>
+<<<<<<< HEAD
         </nav>
     </header>
     <h1>MARKETPLACE</h1>
@@ -76,11 +151,81 @@
                 <div class="card-action">
                     <a href="./percy.handlebars">Adopt Me!</a>
                 </div>
+=======
+          </div>
+          {{/each}}
+          {{!-- <div class="col l4 m4 s12">
+            <div class="card">
+              <div class="card-img">
+                <img src="img/catimg2.jpg" class="responsive-img">
+              </div>
+              <div class="card-content">
+                <span class="card-title">Cat Name: {{catName}}</span>
+                <p>
+                <ul>
+                  <li>Age: {{age}}</li>
+                  <li>Breed: {{breed}}</li>
+                  <li>Owner name: {{ownerName}}</li>
+                  <li>Located at zip code: {{zipcode}}</li>
+                </ul>
+                </p>
+              </div>
             </div>
+          </div>
+          <div class="col l4 m4 s12">
+            <div class="card">
+              <div class="card-img">
+                <img src="img/catimg3.jpg" class="responsive-img">
+              </div>
+              <div class="card-content">
+                <span class="card-title">Cat Name: {{catName}}</span>
+                <p>
+                <ul>
+                  <li>Age: {{age}}</li>
+                  <li>Breed: {{breed}}</li>
+                  <li>Owner name: {{ownerName}}</li>
+                  <li>Located at zip code: {{zipcode}}</li>
+                </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col l4 m4 s12">
+            <div class="card">
+              <div class="card-img">
+                <img src="img/catimg.jpg" class="responsive-img">
+              </div>
+              <div class="card-content">
+                <span class="card-title">Cat Name: {{catName}}</span>
+                <p>
+                <ul>
+                  <li>Age: {{age}}</li>
+                  <li>Breed: {{breed}}</li>
+                  <li>Owner name: {{ownerName}}</li>
+                  <li>Located at zip code: {{zipcode}}</li>
+                </ul>
+                </p>
+              </div>
+>>>>>>> acfca59606e1889c0bcc580e4d872d281a109804
+            </div>
+          </div> --}}
         </div>
+      </div>
     </div>
+<<<<<<< HEAD
     <footer>
         <h6>Copyright: The Cool Catz</h6>
     </footer>
     <script src="/public/js/view.js"></script>
 </body>
+=======
+  </div>
+</div>
+</div>
+
+<div class="divider"></div>
+
+<footer>
+  <h6>Copyright: The Cool Catz</h6>
+</footer>
+>>>>>>> acfca59606e1889c0bcc580e4d872d281a109804
