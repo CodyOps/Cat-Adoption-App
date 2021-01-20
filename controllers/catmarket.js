@@ -12,11 +12,7 @@ router.get("/catmarket", function (req, res) {
   });
 });
 
-<<<<<<< HEAD
-router.post("/catmarket/create", function (req, res) {
-=======
 router.post("/cats/create", function (req, res) {
->>>>>>> ac9ae7c7fb90bd7ed6e6deecc8665d8a7e421a93
   catsForum.create(req.body.cat_name, function (result) {
     console.log(result);
     res.redirect("/");
