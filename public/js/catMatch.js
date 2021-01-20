@@ -3,10 +3,10 @@ const cat =
 
 const requestUrl = "https://api.thecatapi.com/v1/"
 
-$.getJSON("https://api.thecatapi.com/v1/breeds?limit=3&page=0/api_key=51797460-883d-4b38-baf9-14e7557a5dec", function(data) {
+$.getJSON("https://api.thecatapi.com/v1/breeds?/api_key=51797460-883d-4b38-baf9-14e7557a5dec", function(data) {
     console.log(data);
 
-    const cat = "https://api.thecatapi.com/v1/breeds/" + data.name[0].cat;
+    const cat = "https://api.thecatapi.com/v1/breeds/" + data.name[i].cat;
     const temperament = "https://api.thecatapi.com/v1/breeds/" + data.temperament.temperament;
     const lifeSpan = "https://api.thecatapi.com/v1/breeds/" + data.life_span.lifeSpan;
     const description = "https://api.thecatapi.com/v1/breeds/" + data.description.description;
