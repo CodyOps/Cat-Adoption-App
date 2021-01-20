@@ -2,7 +2,7 @@
 /* THIS IS FOR THE INDEX PAGE */
 #match_signup {
   height: 500px;
-  background-image: url("public/img/mancarryingcat.jpg");
+  background-image: url("/img/mancarryingcat.jpg");
   background-size: 700px;
   background-repeat: no-repeat;
 }
@@ -13,6 +13,7 @@ p {
 
 #testimonials {
   background-color: rgba(250, 192, 184, 0.747);
+  margin-top: 50px;
   height: 150px;
   width: auto;
   text-align: center;

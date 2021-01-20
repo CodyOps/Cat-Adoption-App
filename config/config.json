@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "19951998",
+    "password": "root",
     "database": "catMarket",
     "host": "127.0.0.1",
     "port": 3306,
