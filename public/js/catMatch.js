@@ -2,6 +2,11 @@ const { application } = require("express");
 
 // const requestUrl = "https://api.thecatapi.com/v1/";
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> d472c5e0c89c88fb3ac75d4812ebbf29a338c21e
 // $.getJSON(
 //   "https://api.thecatapi.com/v1/breeds?limit=3&page=0/api_key=51797460-883d-4b38-baf9-14e7557a5dec",
 //   function (data) {
@@ -16,6 +21,10 @@ const { application } = require("express");
 //       "https://api.thecatapi.com/v1/breeds/" + data.description.description;
 //     const wikiLink =
 //       "https://api.thecatapi.com/v1/breeds/" + data.wikipedia_url.wikiLink;
+<<<<<<< HEAD
+=======
+
+>>>>>>> d472c5e0c89c88fb3ac75d4812ebbf29a338c21e
 
 //     $(".cat").attr("src", cat);
 //     $(".temperament").append(temperament);
