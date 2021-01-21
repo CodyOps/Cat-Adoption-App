@@ -23,6 +23,9 @@ p {
 
 .brand-logo {
   font-family: 'Potta One', cursive;
+  text-shadow: 2px 2px black;
+  text-align: center;
+  text-decoration: underline;
 }
 
 footer {
