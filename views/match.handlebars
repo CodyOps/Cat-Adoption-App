@@ -18,15 +18,21 @@
         <h4>Select a breed</h4>
         <ul class="button-group float-center">
             <label>Browser Select</label>
-            <select class="browser-default">
+            <select class="browser-default" id="breed_dropdown">
                 <option value="" disabled selected>Breed</option>
-                {{!-- is there a way to loop through the breed column??? --}}
                 <option value="1">Option 1</option>
                 <option value="2">Option 2</option>
                 <option value="3">Option 3</option>
             </select>
-            
         </ul>
+{{!-- 
+        <input
+          id="textInput"
+          class="input"
+          type="text"
+          placeholder="What breed are you looking for"
+        />
+      </div> --}}
         <button class="btn waves-effect waves-light" type="submit" id="catbutton">Submit</button>
     </div>
 
@@ -39,10 +45,7 @@
                 <div class="row">
                     <div class="col s12">
                         <div class="card">
-                            <div class="card-img">
-                                <img src="img/catimg2.jpg" class="responsive-img">
-                            </div>
-                            <div class="card-content">
+                            <div class="card-content" id="display-breed">
                                 <span class="card-title">Breed: </span>
                             </div>
                         </div>
