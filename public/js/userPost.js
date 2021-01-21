@@ -1,5 +1,5 @@
 
-
+document.addEventListener("DOMContentLoaded", function () {
 
 const addBtn = document.getElementById("user_post");
 addBtn.addEventListener("submit", (event) => {
@@ -41,3 +41,5 @@ addBtn.addEventListener("submit", (event) => {
   document.getElementById("zipcode").value = "";
   document.getElementById("ownerName").value = "";
 });
+
+})
