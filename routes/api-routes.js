@@ -3,7 +3,7 @@ const db = require("../models");
 
 // Routes
 module.exports = (app) => {
-  
+
   app.post("/api/new", (req, res) => {
     const user = req.body;
     console.log(user);
