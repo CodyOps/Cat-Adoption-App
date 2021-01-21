@@ -4,8 +4,8 @@
             <a href="#" class="brand-logo right">The Purr-fect Match</a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li><a href="/">Home</a></li>
-                <li><a href="https://www.github.com/">Contact Us</a></li>
-                <li><a href="https://www.facebook.com/">Facebook</a></li>
+                <li><a href="/marketplace">Marketplace</a></li>
+                <li><a href="https://www.aspca.org/adopt-pet/adoptable-cats-your-local-shelter">ASPCA</a></li>
             </ul>
         </div>
     </nav>
@@ -16,48 +16,77 @@
 <div class="row">
     <div class="col s3" id="filter">
         <h4>Select a breed</h4>
-        <ul class="button-group float-center">
-            <label>Browser Select</label>
-            <select class="browser-default" id="breed_dropdown">
-                <option value="" disabled selected>Breed</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
-            </select>
-        </ul>
-{{!-- 
-        <input
-          id="textInput"
-          class="input"
-          type="text"
-          placeholder="What breed are you looking for"
-        />
-      </div> --}}
-        <button class="btn waves-effect waves-light" type="submit" id="catbutton">Submit</button>
+
+        {{!-- select dropdown
+        <form class="form_inline">
+            <ul class="button-group float-center">
+                <label>Browser Select</label>
+                <select class="browser-default" id="breed_dropdown">
+                    <option value="" disabled selected>Breed</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+            </ul>
+        </form> --}}
+
+        {{!-- search text field and button --}}
+        <form class="form_inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search breeds" aria-label="Search"
+                id="search-input" />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-button"> Search
+            </button>
+        </form>
+
     </div>
 
     <div class="col s9">
         <!-- cat marketplace title and description   -->
         <div class="row">
-            <h4>You selected: </h4>
             <div class="divider"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col s12">
+                    <div class="col s6">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="/img/bombay-cat.jpg" class="responsive-img">
+                            </div>
+                            <div class="card-content" id="display-breed">
+                                <span class="card-title" id="breedname">Breed: Bombay </span>
+                                <br />
+                                <p class="text" id="lifespan">Life span: 12-16 years</p>
+                                <br />
+                                <p class="text" id="temp">Temperament: "Affectionate, Dependent, Gentle, Intelligent,
+                                    Playful"</p>
+                                <br />
+                                <p class="text" id="descrip">Description: "The the golden eyes and the shiny black coa
+                                    of the Bopmbay is absolutely striking. Likely to bond most with one family member,
+                                    the Bombay will follow you from room to room and will almost always have something
+                                    to say about what you are doing, loving attention and to be carried around, often on
+                                    his caregiver's shoulder."</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
                         <div class="card">
                             <div class="card-content" id="display-breed">
-                                <span class="card-title">Breed: </span>
+                                <span class="card-title" id="breedName">Breed: </span>
+                                <br />
+                                <p class="text" id="lifeSpan">Life span: </p>
+                                <br />
+                                <p class="text" id="temperament">Temperament: </p>
+                                <br />
+                                <p class="text" id="description">Description: </p>
+
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="divider"></div>
+                <div class="divider"></div>
 
 
-    <footer>
-        <h6>Copyright: The Cool Catz</h6>
-    </footer>
+                <footer>
+                    <h6>Copyright: The Cool Catz</h6>
+                </footer>
